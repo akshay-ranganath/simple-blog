@@ -12,6 +12,7 @@ const Team = ({ data }) => {
       <div>
         {data.team.photos.map(photo => <img src={photo.secure_url} alt='Summer vacation' />)}
       </div>
+      <p>TeamID: {data.team.teamInfo.teamid}</p>
     </div>
   )
 }
@@ -25,6 +26,7 @@ export const pageQuery = graphql`
       coed
       coaches
       teamInfo {
+        teamid
         name
         sport
       }
